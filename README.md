@@ -13,11 +13,27 @@ Laravel製のWebアプリケーションです。
 ### Laravel環境構築
 -docker-compose exec php bash
 
+-cp .env.example .env
+
+-composer install
+
 -php artisan key:generate
 
 -php artisan migrate
 
 -php artisan db:seed
+
+## 環境構築時の注意点
+
+- 本アプリは Docker を使用しています。
+- DB接続エラー（Connection refused）が発生した場合は、
+  `.env` の DB 設定が Docker のサービス名と一致しているかを確認してください。
+
+### 例（docker-compose 使用時）
+
+DB_HOST には `localhost` や `127.0.0.1` ではなく、  
+`docker-compose.yml` に定義されている **MySQL のサービス名（例：mysql）** を指定します。
+
 
 ## 使用技術（実行環境）
 -Laravel 8.x（8.83.29）
