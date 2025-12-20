@@ -1,0 +1,97 @@
+.confirm__content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.confirm__heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Playfair Display", serif;
+    color: #8b7969;
+}
+
+/* テーブル全体 */
+.confirm-table {
+    border: 1px solid #8b7969;
+}
+
+.confirm-table__inner {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 行 */
+.confirm-table__row {
+    border-bottom: 1px solid #e0dcd7;
+}
+
+/* 左カラム（項目名） */
+.confirm-table__header {
+    width: 30%;
+    padding: 20px;
+    background-color: #bfb3a8;
+    color: #fff;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+    padding-left: 50px;
+}
+
+/* 右カラム（値） */
+.confirm-table__text {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    color: #8b7969;
+    font-size: 16px;
+}
+
+/* input を文字表示っぽく */
+.confirm-table__text input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #8b7969;
+    pointer-events: none;
+    font-size: 16px;
+    
+}
+
+.confirm-table__text textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    background: transparent;
+    font-size: 14px;
+    color: #8b7969;
+    font-size: 16px;
+}
+
+/* ボタンエリア */
+.form-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* 送信ボタン */
+.form-button__submit {
+    padding: 10px 40px;
+    background-color: #8b7f73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* 修正ボタン */
+.form-button__retouch {
+    background: none;
+    border: none;
+    color: #8b7f73;
+    cursor: pointer;
+    text-decoration: underline;
+}

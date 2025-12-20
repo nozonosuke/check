@@ -1,0 +1,78 @@
+.auth-page {
+    background-color: #e6e1dc;
+    min-height: 100vh;
+}
+
+.login__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.login__heading {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    color: #8b7969;
+    font-size: 20px;
+}
+
+.form {
+    margin: 0 auto;
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #e6e1dc;
+    border-radius: 3px;
+    padding: 40px 50px;
+    
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__label {
+    width: 80%;
+    text-align: left;
+    display: block;
+    font-size: 17px;
+    color: #8b7969;
+    margin-bottom: 8px;
+}
+
+.form__group input {
+    width: 80%;
+    height: 40px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+    background-color: #f4efe9;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form__group input::placeholder {
+    color: #8b7969;
+}
+
+.form__button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form__button-submit {
+    width: 120px;
+    height: 36px;
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form__button-submit:hover {
+    opacity: 0.9;
+}
+
