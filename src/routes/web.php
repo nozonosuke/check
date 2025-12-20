@@ -28,6 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::get('/search', [AdminController::class, 'search']);
     Route::get('/reset', [AdminController::class, 'reset']);
+    Route::get('/admin/export', [AdminController::class, 'export'])->name('admin.export');
     Route::get('/admin/{id}', [AdminController::class, 'show']);
-    Route::delete('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.deatroy');
+    Route::delete('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+    
 });

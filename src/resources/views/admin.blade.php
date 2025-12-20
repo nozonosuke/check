@@ -68,11 +68,19 @@
     <!--エクスポート%ページネーション-->
         <div class="admin__control">
             <div class="admin__export">
-                <button class="admin__export-button">エクスポート</button>
+                <form action="{{ route('admin.export') }}" method="get">
+                    <input type="hidden" name="name" value="{{ request('name') }}">
+                    <input type="hidden" name="gender" value="{{ request('gender') }}">
+                    <input type="hidden" name="category_id" value="{{ request('category_id') }}">
+                    <input type="hidden" name="date" value="{{ request('date') }}">
+                    
+                    <button class="admin__export-button">エクスポート</button>
+                </form>
+                
             </div>
 
             <div class="pagination">
-                {{ $contacts->links() }}
+                {{ $contacts->links('vendor.pagination.numbers-only') }}
             </div>
         </div>
     
@@ -110,7 +118,7 @@
                     {{ $contact->email }}
                 </td>
                 <td class="admin-table__text">
-                    {{ $contact->category_id }}
+                    {{ $contact->category->content ?? '' }}
                 </td>
                 <td class="admin-table__text">
                     <button type="button" class="admin-table__text-detail" onclick="openModal({{ $contact->id }})">詳細</button>
