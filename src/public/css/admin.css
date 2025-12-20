@@ -111,6 +111,76 @@
     border: none;
     padding: 8px 18px;
     cursor: pointer;
+    font-size: 14px;
+}
+
+/* ===== Pagination（Laravel links() 用）===== */
+.pagination {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 「Showing 1 to ...」の行を消す（不要なら） */
+.pagination p {
+    display: none;
+}
+
+.pagination nav>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ページ番号とボタンのまとまり */
+.pagination .relative.z-0 {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* ボタン共通 */
+.pagination a,
+.pagination span {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 10px;
+
+    border: 1px solid #e0dcd7;
+    background: #fff;
+    color: #8b7969;
+
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 2px;
+    line-height: 1;
+}
+
+/* 現在ページ（選択中） */
+.pagination [aria-current="page"] span {
+    background: #8b7969;
+    color: #fff;
+    border-color: #8b7969;
+}
+
+/* hover */
+.pagination a:hover {
+    background: #f5f3f1;
+}
+
+/* 「前へ/次へ」など無効時 */
+.pagination [aria-disabled="true"] span {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* 矢印SVGが巨大化しているのを強制的に小さくする */
+.pagination svg {
+    width: 14px !important;
+    height: 14px !important;
 }
 
 /*==テーブル==*/
@@ -166,12 +236,6 @@
 .admin-table__text-detail:hover {
     background-color: #8b7969;
     color: #fff;
-}
-
-.pagination {
-    margin-top: 15px;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .modal {
@@ -245,81 +309,4 @@
 
 .modal__delete-button:hover {
     background-color: #c9302c;
-}
-
-/* ===== Pagination（Laravel links() 用）===== */
-.pagination {
-    margin: 25px 0 0;
-    display: flex;
-    justify-content: center;
-    /* 中央に配置 */
-}
-
-/* 「Showing 1 to ...」の行を消す（不要なら） */
-.pagination p {
-    display: none;
-}
-
-/* nav内のレイアウトを中央寄せに揃える */
-.pagination nav,
-.pagination nav>div {
-    width: 100%;
-}
-
-.pagination nav>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ページ番号とボタンのまとまり */
-.pagination .relative.z-0 {
-    display: inline-flex;
-    gap: 8px;
-    /* 数字の間隔 */
-    align-items: center;
-}
-
-/* リンク/現在ページ/無効 を共通デザインに */
-.pagination a,
-.pagination span {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 0 10px;
-
-    border: 1px solid #e0dcd7;
-    background: #fff;
-    color: #8b7969;
-
-    font-size: 13px;
-    text-decoration: none;
-    border-radius: 2px;
-    line-height: 1;
-}
-
-/* 現在ページ（選択中） */
-.pagination [aria-current="page"] span {
-    background: #8b7969;
-    color: #fff;
-    border-color: #8b7969;
-}
-
-/* hover */
-.pagination a:hover {
-    background: #f5f3f1;
-}
-
-/* 「前へ/次へ」など無効時 */
-.pagination [aria-disabled="true"] span {
-    opacity: 0.4;
-    cursor: default;
-}
-
-/* 矢印SVGが巨大化しているのを強制的に小さくする */
-.pagination svg {
-    width: 14px !important;
-    height: 14px !important;
 }
